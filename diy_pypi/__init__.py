@@ -1,0 +1,2 @@
+from diy_pypi.module_one import ExampleClassOne
+from diy_pypi.module_two import ExampleClassTwo
