@@ -60,7 +60,6 @@ If all went well with cloning, your project structure should look like this:
 |── setup.cfg
 ```
 
-<br>
 
 ### **What Everything Does**
 And, here's what all the different files and directories are for:
@@ -80,20 +79,18 @@ And, here's what all the different files and directories are for:
 | pyproject.toml     | You can think of this as the python **'Settings'** file that is detailing the tools required to build this project. This is typically just **setuptools** and **wheel**. |
 
 <br>
-I know, I know, that's a lot of information, but trust me when I say that a **solid** understanding of the files makes all the difference!
-<br><br>
 
 ### **Filling in the Blanks**
 Alrighty, now it's time to **replace my boilerplate code** with your super awesome code. The files you absolutely want to be changing are:
-- `setup.py`
+- `setup.cfg`
 - `__init__.py`
 - `module_one.py`
 - `module_two.py` -- feel free to delete this if you don't want/need multiple package files
 - `package-name` -- change the name of this directory to the name of your package
 
-Want an example? Check out the source code for [sreddit](https://github.com/Mandy-cyber/sreddit) my subreddit scraper package.
+Want an example? Check out the source code for [sreddit](https://github.com/Mandy-cyber/sreddit)--my subreddit scraper package.
 
 <br>
 
 ## **Deploying your Package**
-Okay, you've written your code, you've setup all your files... what next? Easy: it's time to build and deploy your code!
+Okay, you've written your code, you've setup all your files... what next? Easy: it's time to **build and deploy your package**!
