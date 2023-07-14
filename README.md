@@ -142,6 +142,8 @@ If all goes well, Twine will ask for your username and password. Your username w
 5. After running the above commands, you'll be provided a link that, when clicked, will bring you to the package you just published!
 
 6. Install and test your package by creating a virtual environment somewhere on your system, downloading your package, and checking if it works as expected!
+   
+7. In the future, to automate those final couple of steps, you can just 'Create a new release' in your Github repo and your workflow file should do all this for you! 
 
 
 ## **Useful Resources**
