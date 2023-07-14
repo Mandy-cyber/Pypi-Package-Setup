@@ -1,5 +1,5 @@
 # Pypi-Package-Setup
-> TODO: add images
+> TODO: add images, fill out 'useful resources' and 'get in touch'
 
 Structure, base code, and instructions for setting up your own pypi package!
 
@@ -142,3 +142,10 @@ If all goes well, Twine will ask for your username and password. Your username w
 5. After running the above commands, you'll be provided a link that, when clicked, will bring you to the package you just published!
 
 6. Install and test your package by creating a virtual environment somewhere on your system, downloading your package, and checking if it works as expected!
+
+
+## **Useful Resources**
+
+
+
+## **Get in Touch**
