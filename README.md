@@ -1,4 +1,6 @@
 # Pypi-Package-Setup
+> TODO: add images
+
 Structure, base code, and instructions for setting up your own pypi package!
 
 ### **Table of Contents**
@@ -26,10 +28,8 @@ So, this template repo is here to lay out all the structural features of your pa
 ## **Get Started**
 Getting started is as simple as the following three steps:
 1. Click `Use this template` <br>
-    ```TODO: add image here```
 
 2. Select `Create a new repository` so you can have an exact copy of this repository<br>
-    ```TODO: add image here```
 
 3. Clone your repository to your preffered IDE. If this is new to you, check out [this guide](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) by GitHub.
 
@@ -94,3 +94,51 @@ Want an example? Check out the source code for [sreddit](https://github.com/Mand
 
 ## **Deploying your Package**
 Okay, you've written your code, you've setup all your files... what next? Easy: it's time to **build and deploy your package**!
+
+### Build
+To build your package, make sure you are in the root folder then run the following commands, one-by-one, in your terminal:
+```
+# install/upgrade pip
+python3 -m pip install -U pip
+
+# install/upgrade setuptools
+pip install -U setuptools
+
+# install/upgrade build tool
+python -m pip install --upgrade build
+
+# build the project
+python -m build
+```
+If you've followed all the steps above and ran those commands, you should now see: a `dist` folder created, a `package-name.egg-info` folder, and a success message in your terminal that looks like
+```
+Successfully built package-name-0.0.1.tar.gz and package-name-0.0.1-py3-none-any.whl
+```
+
+
+### Deploy
+> [Test PyPi](https://test.pypi.org/) is "a separate instance of the Python Package Index that allows you to try distribution tools and processes without affecting the real index."
+
+Now it's time to _deploy_ your package to PyPi... actually you may want to start by deploying to TestPyPi just to make sure things are actually working as expected. Here are your next steps:
+1. Go to [Test PyPi](https://test.pypi.org/), create an account, and verify your email
+
+2. Generate an API token [here](https://test.pypi.org/manage/account/token/) giving it any name and, for the sake of this tutorial, keeping the scope as **"Entire Account"**. Do not forget to _copy the token_ before exiting the page!
+
+3. Install twine
+```
+python -m pip install --upgrade twine
+```
+
+4. Upload your package
+```
+# to upload to TestPyPi
+python -m twine upload --repository testpypi dist/*
+
+# to upload to actual PyPi
+python -m twine upload dist/*
+```
+If all goes well, Twine will ask for your username and password. Your username will be `__token__` and your password the API token from Step 2 _(include the 'pypi-' prefix)_
+
+5. After running the above commands, you'll be provided a link that, when clicked, will bring you to the package you just published!
+
+6. Install and test your package by creating a virtual environment somewhere on your system, downloading your package, and checking if it works as expected!
